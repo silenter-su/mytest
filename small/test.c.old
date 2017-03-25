@@ -1,0 +1,191 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#include "pcap.h"   
+
+#define TEST "hello world"
+
+#if 0
+void main()
+{                                   
+	//Save file
+	"Protocal",
+		"FileSize",
+		"FileSize",
+		"FileSizeout",
+		"FileSizileIP",
+		//Detect{"FileSizSetting
+		"FileSizanMethod",
+		"FileSizanTimeout",
+		"FileSizalwith",
+		"FileSizectWhitelist",
+		"end" 
+}; 
+int i = 0;
+for(i = 0;strcmp(MyTestKeyWords[i],"end") != 0;i++)
+{
+	printf ("%s\n",MyTestKeyWords[i]);
+}
+printf("---------%d---------\n",sizeof(unsigned int));
+
+char *a = "hello world";
+
+if (strcmp(a,TEST) == 0)
+{
+	printf("++++++!!!!!!\n");
+}
+int a = 325423,b = 5435,c = 654765;
+char buf [128];
+sprintf(buf,"%d%d%d",a,b,c);
+printf("%s",buf);
+
+
+getchar();
+
+}
+
+#endif
+#if 0
+main()
+{
+	pcap_if_t *alldevs;
+	pcap_if_t *d;
+	int i=0;
+	char errbuf[PCAP_ERRBUF_SIZE];
+
+	/* 获取本地机器设备列表 */
+	if (pcap_findalldevs(&alldevs, errbuf) == -1)
+	{
+		fprintf(stderr,"Error in pcap_findalldevs_ex: %s/n", errbuf);
+		exit(1);
+	}
+
+	/* 打印列表 */
+	for(d= alldevs; d != NULL; d= d->next)
+	{
+		printf("%d. %s\n", ++i, d->name);
+		if (d->description)
+		  printf(" (%s)\n", d->description);
+		else
+		  printf(" (No description available)/n");
+	}
+
+	if (i == 0)
+	{
+		printf("/nNo interfaces found! Make sure WinPcap is installed./n");
+		return;
+	}
+
+	/* 不再需要设备列表了，释放它 */
+	pcap_freealldevs(alldevs);
+	printf("-------------------sizeof(unsigned int) = %d---------------------------\n",sizeof(unsigned int));
+	printf("-------------------sizeof(unsigned short) = %d---------------------------\n",sizeof(unsigned short));
+
+
+}
+#endif
+#if 0
+#include <stdio.h> 
+
+void print_str(char* str){  
+	printf("%s", str);  
+	str[0] = 'a';  
+	printf("n");  
+}  
+int main(){  
+	char* str = "hello, world!"; 
+	print_str(str); 
+	return 0; 
+}
+
+#endif
+#if 0 
+
+void main()
+{
+	struct timeval tv1,tv2;
+	memset(&tv1,0,sizeof(struct timeval));
+	memset(&tv2,0,sizeof(struct timeval));
+
+	gettimeofday(&tv1,NULL);
+	sleep(10);
+	gettimeofday(&tv2,NULL);
+
+	printf("tv1 value is : %u\n"
+				"tv2 value is : %u\n"
+				"tv1.tv_sec - tv2.tv_sec = %u\n",
+				tv1.tv_sec,
+				tv2.tv_sec,
+				tv2.tv_sec - tv1.tv_sec);
+	return;
+}
+
+#endif
+#if 1
+#include <stdio.h>
+#include <pthread.h>
+
+void processA();
+void processB();
+void * processAworker(void *arg);
+
+int main(int argc, const char *argv[])
+{
+	int pid;
+
+	pid = fork();
+
+	if(pid != 0)
+	  processA();
+	else
+	  processB();
+
+	return 0;
+}
+
+void processA()
+{
+	pid_t pid = getpid();
+	char prefix[] = "ProcessA: ";
+	char tprefix[] = "thread ";
+	int tstatus;
+	pthread_t pt;
+
+	printf("%s%lu %s\n", prefix, pid, "step1");
+
+	tstatus = pthread_create(&pt, NULL, processAworker, NULL);
+	if( tstatus != 0 )
+	{
+		printf("ProcessA: Can not create new thread.");
+	}
+
+	processAworker(NULL);
+	sleep(1);
+}
+
+void * processAworker(void *arg)
+{
+	pid_t pid = getpid();
+	pthread_t tid = pthread_self();
+	char prefix[] = "ProcessA: ";
+	char tprefix[] = "thread ";
+
+	printf("%s%lu %s%lu %s\n", prefix, pid, tprefix, tid, "step2");
+	printf("%s%lu %s%lu %s\n", prefix, pid, tprefix, tid, "step3");
+
+	return NULL;
+}
+
+void processB()
+{
+	pid_t pid = getpid();
+	char prefix[] = "ProcessB: ";
+	printf("%s%lu %s\n", prefix, pid, "step1");
+	printf("%s%lu %s\n", prefix, pid, "step2");
+	printf("%s%lu %s\n", prefix, pid, "step3");
+
+}
+#endif
+
+

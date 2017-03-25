@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"P2P Octoshape UDP Session"; detection_filter: count 2, seconds 60, track by_src; reference:url,msmvps.com/blogs/bradley/archive/2009/01/20/peer-to-peer-on-cnn.aspx; reference:url,doc.emergingthreats.net/2009986; classtype:trojan-activity; sid:2009986; rev:2;)

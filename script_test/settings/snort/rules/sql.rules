@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"SQL Slammer Worm propagation attempt"; content:"|04|"; depth:1; content:"|81 F1 03 01 04 9B 81 F1 01|"; content:"sock"; content:"send"; reference:bugtraq,5310; reference:bugtraq,5311; reference:cve,2002-0649; reference:nessus,11214; reference:url,vil.nai.com/vil/content/v_99992.htm; classtype:misc-attack; sid:2102003; rev:9;)

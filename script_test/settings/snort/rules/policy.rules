@@ -1,0 +1,2 @@
+reject udp any any -> any any (msg:"POLICY DNS Update From External net"; byte_test:1,!&,128,2; byte_test:1,!&,64,2; byte_test:1,&,32,2; byte_test:1,!&,16,2; byte_test:1,&,8,2; reference:url,doc.emergingthreats.net/2009702; classtype:policy-violation; sid:2009702; rev:5;)
+reject ip any any -> any any (msg:"POLICY Protocol 41 IPv6 encapsulation potential 6in4 IPv6 tunnel active"; ip_proto:41; detection_filter:track by_dst, count 1, seconds 60; reference:url,en.wikipedia.org/wiki/6in4; classtype:policy-violation; sid:2012141; rev:2;)

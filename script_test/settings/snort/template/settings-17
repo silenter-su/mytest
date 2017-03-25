@@ -1,0 +1,7 @@
+SNORTRULE_dos=on
+NAME=网络攻击防御
+SNORTRULE_scada=on
+SELECTED=17
+SNORTRULE_exploit-kit=on
+SNORTRULE_indicator-obfuscation=on
+SNORTRULE_indicator-compromise=on

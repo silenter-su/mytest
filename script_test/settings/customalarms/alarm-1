@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+use lib "/usr/lib/system";
+use header qw( :all :ui :misc :cgi :version login);
+
+open (FILE, ">/tmp/soundalert");
+print FILE "1";
+close FILE;
+
+1;

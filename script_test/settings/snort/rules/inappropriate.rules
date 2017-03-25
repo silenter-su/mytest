@@ -1,0 +1,1 @@
+reject tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"INAPPROPRIATE fuck movies"; flow:to_client,established; content:"fuck movies"; nocase; classtype:policy-violation; sid:2101320; rev:8;)

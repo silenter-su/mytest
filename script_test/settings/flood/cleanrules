@@ -1,0 +1,9 @@
+/sbin/iptables -F flood
+/sbin/iptables -F floodsyn1
+/sbin/iptables -X floodsyn1
+/sbin/iptables -F floodtcp2
+/sbin/iptables -X floodtcp2
+/sbin/iptables -F floodudp3
+/sbin/iptables -X floodudp3
+/sbin/iptables -F floodicmp4
+/sbin/iptables -X floodicmp4

@@ -1,0 +1,1 @@
+reject tcp any any -> any any (msg:"MISC Finger remote command pipe execution attempt"; content:"|7C|"; reference:arachnids,380; reference:bugtraq,2220; reference:cve,1999-0152; classtype:attempted-user; sid:2100327; rev:10;)

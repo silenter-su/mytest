@@ -1,0 +1,4 @@
+PIC=off
+RULE=
+RTENABLED=off
+PROMISC=off

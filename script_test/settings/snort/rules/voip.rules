@@ -1,0 +1,1 @@
+reject udp any any -> any any (msg:"VOIP Modified Sipvicious Asterisk PBX User-Agent"; content:"|0d 0a|User-Agent|3A| Asterisk PBX"; nocase; fast_pattern:only; detection_filter: count 1, seconds 60, track by_src; reference:url,blog.sipvicious.org/2010/11/distributed-sip-scanning-during.html; classtype:attempted-recon; sid:2012296; rev:1;)

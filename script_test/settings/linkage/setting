@@ -1,0 +1,10 @@
+ADDRESS=192.168.2.200
+USERNAME=root
+ENABLE=on
+PORT=443
+PASSWORD=bd888888
+PROTOCOL=https
+TIMEOUT=5
+LEVEL=4
+DEVICE=bd
+URL=/modules/rule/cgi-bin/rule/linkage.cgi

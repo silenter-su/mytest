@@ -1,0 +1,4 @@
+pass tcp [1.1.1.1] any -> [2.2.2.2] [80,8080] (msg:"URL whitelist pass a.com"; flow:to_server,established; content:"a.com"; http_header; nocase;  classtype:web-application-activity; sid:8003794; rev:1;)
+alert tcp [3.3.3.3] any -> $EXTERNAL_NET [80,8080] (msg:"URL whitelist alert b.com"; flow:to_server,established; content:"b.com"; http_header; nocase;  classtype:web-application-activity; sid:8003795; rev:1;)
+pass tcp $HOME_NET any -> [5.5.5.5] [80,8080] (msg:"URL whitelist pass ddd.com"; flow:to_server,established; content:"ddd.com"; http_header; nocase;  classtype:web-application-activity; sid:8003796; rev:1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET [80,8080] (msg:"URL whitelist alert jd.com"; flow:to_server,established; content:"jd.com"; http_header; nocase;  classtype:web-application-activity; sid:8003797; rev:1;)

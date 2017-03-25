@@ -1,0 +1,12 @@
+NAME=网站防护防御
+SNORTRULE_os-windows=on
+SNORTRULE_server-samba=on
+SNORTRULE_os-other=on
+SELECTED=16
+SNORTRULE_server-apache=on
+SNORTRULE_server-other=on
+SNORTRULE_dos=on
+SNORTRULE_server-oracle=on
+SNORTRULE_sql=on
+SNORTRULE_server-mail=on
+SNORTRULE_server-webapp=on

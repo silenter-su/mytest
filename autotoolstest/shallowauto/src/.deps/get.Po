@@ -1,0 +1,5 @@
+get.o: get.c /usr/include/stdc-predef.h ../include/get.h
+
+/usr/include/stdc-predef.h:
+
+../include/get.h:

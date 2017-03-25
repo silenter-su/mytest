@@ -1,0 +1,3 @@
+/var/log/snort/alert,6,hourly,60,IDS logs,false,,snort
+/var/log/snort/portscan.log,6,hourly,60,SCAN logs,false,,snort
+/var/log/snort/related.log,6,hourly,60,Relate logs,false,,snort

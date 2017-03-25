@@ -1,0 +1,3 @@
+/var/log/snort/alert,9,monthly,6,IDS logs,,
+/var/log/snort/portscan.log,9,monthly,6,SCAN logs,,
+/var/log/snort/related.log,9,monthly,6,Relate logs,,

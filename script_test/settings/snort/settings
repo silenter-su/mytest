@@ -1,0 +1,8 @@
+ENABLE_IDP=on
+NICIDS_ethD=on
+inputchecking_buffer=
+inputchecking_client=1793
+SYSLOG_SERVER=
+inputchecking_server=1793
+NICIPS_ethD=on
+inputchecking=1793

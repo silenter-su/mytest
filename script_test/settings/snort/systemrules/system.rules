@@ -1,0 +1,2 @@
+# T drop
+reject ip any any -> anysdsdfd any (msg:"POLICY Protocol 41 IPv6 encapsulation potential 6in4 IPv6 tunnel active"; ip_proto:41; detection_filter:track by_dst, count 1, seconds 60; classtype:policy-violation; priority:1; sid:82012141; rev:1;)
